@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+    <t t-name="custom_pos.OrderReceipt" t-inherit="point_of_sale.OrderReceipt" t-inherit-mode="extension">
+        <!-- Remove only the ticket-portal barcode/QR image. The invoice URL and
+             code remain present, and their content moves into the freed space. -->
+        <xpath expr="//img[@id='posqrcode']/parent::div" position="replace"/>
+
+        <xpath expr="//div[contains(@class, 'footer-powered-by')]" position="before">
+            <section class="custom-pos-exchange-policy pt-3">
+                <div class="custom-pos-policy-ar" dir="rtl" lang="ar">
+                    <p class="fw-bold">شكراً لاختياركم متجر سومر (SUMER)</p>
+                    <p>عزيزي العميل، يرجى العلم أنه بعد شراء المنتج ومغادرة المتجر لا يمكن إرجاعه.</p>
+                    <p>ويسمح بالاستبدال فقط.</p>
+                    <p>مدة الاستبدال هي 3 أيام فقط من تاريخ الشراء، على أن تكون السلعة بحالتها الأصلية كما تم استلامها.</p>
+                    <p>شكراً لتسوقكم معنا.</p>
+                </div>
+                <div class="custom-pos-policy-en" dir="ltr" lang="en">
+                    <p class="fw-bold">THANK YOU FOR SHOPPING WITH SUMER</p>
+                    <p>Dear Customer, kindly note that once you purchase an item and leave the shop, returns are not accepted — exchange only.</p>
+                    <p>The exchange period is 3 days only from the date of purchase, and the item must be in the same original condition as received.</p>
+                    <p>Thank you for shopping with us.</p>
+                </div>
+            </section>
+        </xpath>
+    </t>
+</templates>

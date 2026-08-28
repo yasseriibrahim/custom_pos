@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+    <t t-name="custom_pos.TicketScreen" t-inherit="point_of_sale.TicketScreen" t-inherit-mode="extension">
+        <xpath expr="//ActionpadWidget[@actionName.translate='Refund']" position="before">
+            <button class="control-button btn btn-secondary btn-lg lh-lg w-100 mb-2"
+                    t-att-disabled="!getHasItemsToRefund()"
+                    t-on-click="onDoExchange">
+                <i class="fa fa-exchange me-2" role="img" aria-label="Exchange" title="Exchange"/>
+                Exchange
+            </button>
+        </xpath>
+    </t>
+</templates>
