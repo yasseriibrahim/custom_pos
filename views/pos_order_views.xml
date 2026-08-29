@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_pos_order_form_custom_pos" model="ir.ui.view">
+        <field name="name">pos.order.form.custom.pos</field>
+        <field name="model">pos.order</field>
+        <field name="inherit_id" ref="point_of_sale.view_pos_pos_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//group[@name='order_fields']/field[@name='fiscal_position_id']" position="after">
+                <field name="is_exchange" readonly="1" invisible="not is_exchange"/>
+                <field name="exchange_origin_order_id" readonly="1" invisible="not is_exchange"/>
+            </xpath>
+            <xpath expr="//field[@name='lines']/list/field[@name='discount']" position="after">
+                <field name="fixed_discount_amount" widget="monetary" optional="hide"/>
+            </xpath>
+            <xpath expr="//field[@name='lines']/form//field[@name='discount']" position="after">
+                <field name="fixed_discount_amount" widget="monetary"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

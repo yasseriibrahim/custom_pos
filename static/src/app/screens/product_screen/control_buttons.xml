@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+    <t t-name="custom_pos.ControlButtons" t-inherit="point_of_sale.ControlButtons" t-inherit-mode="extension">
+        <xpath expr="//div[contains(@class, 'control-buttons-modal')]/button[1]" position="before">
+            <button t-att-class="buttonClass" t-on-click="() => this.clickFixedDiscountAmount()">
+                <i class="fa fa-money me-2" role="img" aria-label="Fixed Discount" title="Fixed Discount"/>
+                Fixed Discount (SAR)
+            </button>
+        </xpath>
+    </t>
+</templates>

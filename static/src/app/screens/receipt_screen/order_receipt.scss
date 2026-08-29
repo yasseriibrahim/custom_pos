@@ -1,0 +1,35 @@
+.pos-receipt #qrcode,
+.pos-receipt img.pos-receipt-qrcode {
+    display: none !important;
+    width: 0 !important;
+    height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.pos-receipt .custom-pos-exchange-policy {
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 6px;
+    padding-top: 6px;
+    border-top: 1px dashed #000;
+    font-size: 11px;
+    line-height: 1.35;
+    text-align: center;
+    white-space: normal;
+    overflow-wrap: break-word;
+
+    p {
+        margin: 0 0 5px;
+        break-inside: avoid;
+        page-break-inside: avoid;
+    }
+
+    .custom-pos-policy-ar {
+        font-family: Tahoma, Arial, sans-serif;
+    }
+
+    .custom-pos-policy-en {
+        margin-top: 8px;
+    }
+}
