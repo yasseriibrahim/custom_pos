@@ -35,6 +35,9 @@ class PosOrderLine(models.Model):
         help="Exact monetary discount entered by the cashier for this line.",
     )
 
+
+
+
     def _load_pos_data_fields(self, config):
         fields_to_load = super()._load_pos_data_fields(config)
         return fields_to_load + ["fixed_discount_amount"]
