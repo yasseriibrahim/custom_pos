@@ -11,6 +11,7 @@
     "assets": {
         "point_of_sale._assets_pos": [
             "custom_pos/static/src/app/models/pos_order_line.js",
+            "custom_pos/static/src/app/components/product_card/product_card.xml",
             "custom_pos/static/src/app/screens/product_screen/control_buttons.js",
             "custom_pos/static/src/app/screens/product_screen/control_buttons.xml",
             "custom_pos/static/src/app/screens/ticket_screen/ticket_screen.js",
